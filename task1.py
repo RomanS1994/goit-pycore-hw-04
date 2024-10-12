@@ -2,7 +2,17 @@ from pathlib import Path
 
 file_name = Path('./salary_file.txt')
 
-def total_salary(path) -> str:
+def total_salary(path: str) -> str:
+    '''
+    Calculate salary statistics
+
+    Parameters:
+    file path(str)
+    Returns:
+    str - with total and average salary
+    '''
+
+
     if not file_name.exists():
         print(f"Файл {file_name} не знайдено.")
     else:
@@ -21,3 +31,4 @@ def total_salary(path) -> str:
     return print(f"Загальна сума заробітної плати: {total}, Середня заробітна плата: {average}")
 
 total_salary(file_name)
+
